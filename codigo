@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Aprende Quechua</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1ec;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            margin: 0;
+        }
+        section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #8b4513;
+        }
+        .pregunta {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f9f5ef;
+            border-radius: 8px;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #8b4513;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #a0522d;
+        }
+        .resultado {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        #final {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌄 Aprende Quechua</h1>
+        <p>Un viaje para conocer la lengua de los Andes</p>
+    </header>
+
+    <section>
+        <h2>📖 Breve historia del Quechua</h2>
+        <p>
+            El <b>Quechua</b> es una de las lenguas indígenas más antiguas y habladas de América del Sur. 
+            Fue el idioma oficial del <b>Imperio Inca</b> y aún hoy lo hablan millones de personas en Perú, 
+            Bolivia, Ecuador, Colombia, Chile y Argentina.  
+            Es una lengua que conserva la <b>sabiduría ancestral de los Andes</b> y forma parte 
+            de la identidad cultural de los pueblos originarios. 
+            Aprender Quechua es una forma de mantener viva esta herencia.
+        </p>
+    </section>
+
+    <section>
+        <h2>🗣️ Vocabulario en Quechua (20 palabras)</h2>
+        <ul>
+            <li><b>Rimaykullayki</b> → Hola</li>
+            <li><b>Tupananchiskama</b> → Adiós</li>
+            <li><b>Sulpayki</b> → Gracias</li>
+            <li><b>Imaynallan kashanki?</b> → ¿Cómo estás?</li>
+            <li><b>Allinmi kashani</b> → Estoy bien</li>
+            <li><b>Mikhuy</b> → Comida</li>
+            <li><b>Yaku</b> → Agua</li>
+            <li><b>Wasi</b> → Casa</li>
+            <li><b>Inti</b> → Sol</li>
+            <li><b>Killa</b> → Luna</li>
+            <li><b>Churi</b> → Hijo</li>
+            <li><b>Warmi</b> → Mujer</li>
+            <li><b>Qhari</b> → Hombre</li>
+            <li><b>Allpa</b> → Tierra</li>
+            <li><b>Mayu</b> → Río</li>
+            <li><b>Urpi</b> → Paloma</li>
+            <li><b>Pacha</b> → Mundo/Tiempo</li>
+            <li><b>Kawsay</b> → Vida</li>
+            <li><b>Ñawi</b> → Ojo</li>
+            <li><b>Simiy</b> → Boca</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>❓ Mini cuestionario interactivo (10 preguntas)</h2>
+
+        <div class="pregunta">
+            <p>1. ¿Cómo se dice "Hola" en Quechua?</p>
+            <button onclick="verificar(this, true)">Rimaykullayki</button>
+            <button onclick="verificar(this, false)">Sulpayki</button>
+            <div class="resultado"></div>
+        </div>
+
+        <div class="pregunta">
+            <p>2. ¿Qué significa "Yaku"?</p>
+            <button onclick="verificar(this, false)">Sol</button>
+            <button onclick="verificar(this, true)">Agua</button>
+            <div class="resultado"></div>
+        </div>
+
+        <div class="pregunta">
+            <p>3. ¿Cómo preguntarías "¿Cómo estás?"?</p>
+            <button onclick="verificar(this, true)">Imaynallan kashanki?</button>
+            <button onclick="verificar(this, false)">Allinmi kashani</button>
+            <div class="resultado"></div>
+        </div>
+
+        <div class="pregunta">
+            <p>4. ¿Qué significa "Wasi"?</p>
+            <button onclick="verificar(this, true)">Casa</button>
+            <button onclick="verificar(this, false)">Luna</button>
+            <div class="resultado"></div>
+        </div>
+
+        <div class="pregunta">
+            <p>5. ¿Cómo se dice "Gracias" en Quechua?</p>
+            <button onclick="verificar(this, true)">Sulpayki</button>
+            <button onclick="verificar(this, false)">Tupananchiskama</button>
+            <div class="resultado"></div>
+        </div>
+
+        <div class="pregunta">
+            <p>6. ¿Qué significa "Inti"?</p>
+            <button onclick="verificar(this, false)">Luna</button>
+            <button onclick="verificar(this, true)">Sol</button>
+            <div class="resultado"></div>
+        </div>
+
+        <div class="pregunta">
+            <p>7. ¿Qué significa "Killa"?</p>
+            <button onclick="verificar(this, true)">Luna</button>
+            <button onclick="verificar(this, false)">Tierra</button>
+            <div class="resultado"></div>
+        </div>
+
+        <div class="pregunta">
+            <p>8. ¿Cómo se dice "Mundo/Tiempo" en Quechua?</p>
+            <button onclick="verificar(this, true)">Pacha</button>
+            <button onclick="verificar(this, false)">Mayu</button>
+            <div class="resultado"></div>
+        </div>
+
+        <div class="pregunta">
+            <p>9. ¿Qué significa "Ñawi"?</p>
+            <button onclick="verificar(this, true)">Ojo</button>
+            <button onclick="verificar(this, false)">Boca</button>
+            <div class="resultado"></div>
+        </div>
+
+        <div class="pregunta">
+            <p>10. ¿Cómo responderías si alguien te dice "¿Imaynallan kashanki?"?</p>
+            <button onclick="verificar(this, true)">Allinmi kashani</button>
+            <button onclick="verificar(this, false)">Tupananchiskama</button>
+            <div class="resultado"></div>
+        </div>
+
+        <div id="final"></div>
+    </section>
+
+    <script>
+        let correctas = 0;
+        let contestadas = 0;
+        const total = 10;
+
+        function verificar(boton, esCorrecto) {
+            let resultado = boton.parentNode.querySelector(".resultado");
+            if (resultado.textContent !== "") return; // evita repetir
+
+            contestadas++;
+            if (esCorrecto) {
+                resultado.textContent = "✅ ¡Correcto!";
+                resultado.style.color = "green";
+                correctas++;
+            } else {
+                resultado.textContent = "❌ Incorrecto.";
+                resultado.style.color = "red";
+            }
+
+            if (contestadas === total) {
+                document.getElementById("final").textContent =
+                    "🎉 Has terminado. Tu puntaje: " + correctas + "/" + total;
+            }
+        }
+    </script>
+</body>
+</html>
